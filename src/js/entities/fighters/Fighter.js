@@ -1,9 +1,11 @@
 import { FighterState } from "../../constants/fighter.js";
 import { STAGE_FLOOR } from "../../constants/stage.js";
+import * as control from "../../InputHandler.js";
 
 export class Fighter {
-    constructor(name, x, y, direction) {
+    constructor(name, x, y, direction, playerId) {
         this.name = name;
+        this.playerId = playerId;
         this.position = { x, y };
         this.velocity = { x: 0, y: 0 };
         this.initialVelocity = {};
@@ -20,7 +22,7 @@ export class Fighter {
         this.states = {
             [FighterState.IDLE]: {
                 init: this.handleIdleInit.bind(this),
-                update: () => {},
+                update: this.handleIdleState.bind(this),
                 validFrom: [
                     undefined,
                     FighterState.IDLE, FighterState.WALK_FORWARD, FighterState.WALK_BACKWARD,
@@ -30,14 +32,14 @@ export class Fighter {
             },
             [FighterState.WALK_FORWARD]: {
                 init: this.handleMoveInit.bind(this),
-                update: () => {},
+                update: this.handleWalkForwardState.bind(this),
                 validFrom: [
                     FighterState.IDLE, FighterState.WALK_BACKWARD,
                 ],
             },
             [FighterState.WALK_BACKWARD]: {
                 init: this.handleMoveInit.bind(this),
-                update: () => {},
+                update: this.handleWalkBackwardState.bind(this),
                 validFrom: [
                     FighterState.IDLE, FighterState.WALK_FORWARD,
                 ],
@@ -59,11 +61,11 @@ export class Fighter {
             },
             [FighterState.CROUCH]: {
                 init: () => {},
-                update: () => {},
+                update: this.handleCrouchState.bind(this),
                 validFrom: [FighterState.CROUCH_DOWN],
             },
             [FighterState.CROUCH_DOWN]: {
-                init: () => {},
+                init: this.handleCrouchDownInit.bind(this),
                 update: this.handleCrouchDownState.bind(this),
                 validFrom: [FighterState.IDLE, FighterState.WALK_FORWARD, FighterState.WALK_BACKWARD],
             },
@@ -101,6 +103,42 @@ export class Fighter {
         this.handleMoveInit();
     }
 
+    handleCrouchDownInit() {
+        this.handleIdleInit();
+    }
+
+    handleIdleState() {
+        if (control.isUp(this.playerId)) this.changeState(FighterState.JUMP_UP);
+        if (control.isDown(this.playerId)) this.changeState(FighterState.CROUCH_DOWN);
+        if (control.isBackward(this.playerId, this.direction)) this.changeState(FighterState.WALK_BACKWARD);
+        if (control.isForward(this.playerId, this.direction)) this.changeState(FighterState.WALK_FORWARD);
+    }
+
+    handleWalkForwardState() {
+        if (!control.isForward(this.playerId, this.direction)) this.changeState(FighterState.IDLE);
+        if (control.isUp(this.playerId)) this.changeState(FighterState.JUMP_FORWARD);
+        if (control.isDown(this.playerId)) this.changeState(FighterState.CROUCH_DOWN);
+    }
+    
+    handleWalkBackwardState() {
+        if (!control.isBackward(this.playerId, this.direction)) this.changeState(FighterState.IDLE);
+        if (control.isUp(this.playerId)) this.changeState(FighterState.JUMP_BACKWARD);
+        if (control.isDown(this.playerId)) this.changeState(FighterState.CROUCH_DOWN);
+    }
+
+    handleJumpState(time) {
+        this.velocity.y += this.gravity * time.secondsPassed;
+
+        if (this.position.y > STAGE_FLOOR) {
+            this.position.y = STAGE_FLOOR;
+            this.changeState(FighterState.IDLE);
+        }
+    }
+
+    handleCrouchState() {
+        if (!control.isDown(this.playerId)) this.changeState(FighterState.CROUCH_UP);
+    }
+
     handleCrouchDownState() {
         if (this.animations[this.currentState][this.animationFrame][1] === -2) {
             this.changeState(FighterState.CROUCH);
@@ -109,15 +147,6 @@ export class Fighter {
 
     handleCrouchUpState() {
         if (this.animations[this.currentState][this.animationFrame][1] === -2) {
-            this.changeState(FighterState.IDLE);
-        }
-    }
-
-    handleJumpState(time) {
-        this.velocity.y += this.gravity * time.secondsPassed;
-
-        if (this.position.y > STAGE_FLOOR) {
-            this.position.y = STAGE_FLOOR;
             this.changeState(FighterState.IDLE);
         }
     }
