@@ -3,8 +3,8 @@ import { FighterState } from "../../constants/fighter.js";
 import { Fighter } from "./Fighter.js";
 
 export class Ryu extends Fighter {
-    constructor(x, y, velocity) {
-        super("Ryu", x, y, velocity);
+    constructor(x, y, direction, playerId) {
+        super("Ryu", x, y, direction, playerId);
         
         this.image = document.querySelector('img[alt="ryu"]');
 
@@ -36,13 +36,13 @@ export class Ryu extends Fighter {
             ['jump-up-2', [[138, 233, 50, 89], [25, 103]]],
             ['jump-up-3', [[197, 233, 54, 77], [25, 103]]],
             ['jump-up-4', [[259, 240, 48, 70], [28, 101]]],
-            ['jump-up-5', [[319, 234, 48, 86], [25, 103]]],
-            ['jump-up-6', [[375, 244, 55, 103], [32, 107]]],
+            ['jump-up-5', [[319, 234, 48, 89], [25, 106]]],
+            ['jump-up-6', [[375, 244, 55, 109], [31, 113]]],
 
             // Jump Forwards/Backwards
             ['jump-roll-1', [[878, 121, 55, 103], [25, 106]]],
             ['jump-roll-2', [[442, 261, 61, 78], [22, 90]]],
-            ['jump-roll-3', [[507, 259, 104, 24], [61, 76]]],
+            ['jump-roll-3', [[507, 259, 104, 42], [61, 76]]],
             ['jump-roll-4', [[617, 240, 53, 82], [42, 111]]],
             ['jump-roll-5', [[676, 257, 122, 44], [71, 81]]],
             ['jump-roll-6', [[804, 258, 71, 87], [53, 98]]],
