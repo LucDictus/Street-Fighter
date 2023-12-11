@@ -4,7 +4,7 @@ export class Shadow {
     constructor(fighter) {
         this.image = document.querySelector('img[alt="shadow"]');
         this.fighter = fighter;
-        this.frame = [[0, 0, 68, 11], [34, 7]];
+        this.frame = [[0, 0, 69, 11], [34, 7]];
     }
 
     update() {}
