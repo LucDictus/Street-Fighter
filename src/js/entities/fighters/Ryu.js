@@ -40,7 +40,7 @@ export class Ryu extends Fighter {
             ['jump-up-6', [[375, 244, 55, 109], [31, 113]]],
 
             // Jump Forwards/Backwards
-            ['jump-roll-1', [[378, 121, 53, 103], [23, 106]]], // deze is fout
+            ['jump-roll-1', [[375, 244, 55, 109], [23, 106]]], // deze is fout
             ['jump-roll-2', [[442, 261, 61, 78], [22, 90]]],
             ['jump-roll-3', [[507, 259, 104, 42], [61, 76]]],
             ['jump-roll-4', [[617, 240, 53, 82], [42, 111]]],
