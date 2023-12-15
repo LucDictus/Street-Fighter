@@ -1,1 +1,5 @@
 Start hier met de documentatie
+
+wiki:
+https://street-fighter-sprites.fandom.com/wiki/Street_Fighter_II:_The_World_Warrior
+https://street-fighter-sprites.fandom.com/wiki/Street_Fighter_Sprites_Wikia
