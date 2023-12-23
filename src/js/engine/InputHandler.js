@@ -1,5 +1,5 @@
-import { Control, controls } from './constants/control.js';
-import { FighterDirection } from './constants/fighter.js';
+import { Control, controls } from '../constants/control.js';
+import { FighterDirection } from '../constants/fighter.js';
 
 const heldKeys = new Set();
 
