@@ -1,6 +1,6 @@
 import { FighterState, FighterDirection, FrameDelay, PUSH_FRICTION, FIGHTER_START_DISTANCE } from "../../constants/fighter.js";
 import { STAGE_FLOOR, STAGE_MID_POINT, STAGE_PADDING } from "../../constants/stage.js";
-import * as control from "../../InputHandler.js";
+import * as control from "../../engine/InputHandler.js";
 import { rectsOverlap } from "../../utils/collisions.js";
 
 export class Fighter {
