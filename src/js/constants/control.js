@@ -3,23 +3,11 @@ export const Control = {
     RIGHT: 'right',
     UP: 'up',
     DOWN: 'down',
+    LIGHT_PUNCH: 'lightPunch',
+    MEDIUM_PUNCH: 'mediumPunch',
+    HEAVY_PUNCH: 'heavyPunch',
+    LIGHT_KICK: 'lightKick',
+    MEDIUM_KICK: 'mediumKick',
+    HEAVY_KICK: 'heavyKick',
 };
 
-export const controls = [
-    {
-        keyboard: {
-            [Control.LEFT]: 'ArrowLeft',
-            [Control.RIGHT]: 'ArrowRight',
-            [Control.UP]: 'ArrowUp',
-            [Control.DOWN]: 'ArrowDown',
-        },
-    },
-    {
-        keyboard: {
-            [Control.LEFT]: 'KeyD',
-            [Control.RIGHT]: 'KeyG',
-            [Control.UP]: 'KeyR',
-            [Control.DOWN]: 'KeyF',
-        },
-    }
-];
