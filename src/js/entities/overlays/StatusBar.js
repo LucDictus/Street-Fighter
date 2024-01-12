@@ -13,7 +13,7 @@ import { gameState } from "../../state/gameState.js";
 import { drawFrame } from "../../utils/context.js";
 import { FighterAttackBaseData } from "../../constants/fighter.js";
 import { FPS } from "../../constants/game.js";
-import { end } from "../../engine/GameHandler.js";
+// import { end } from "../../engine/GameHandler.js";
 
 export class StatusBar {
     time = 99;
