@@ -32,5 +32,9 @@ export class StreetFighterGame {
 
         window.requestAnimationFrame(this.frame.bind(this));
     }
+
+    end() {
+        
+    }
     
 }
