@@ -13,6 +13,7 @@ import { gameState } from "../../state/gameState.js";
 import { drawFrame } from "../../utils/context.js";
 import { FighterAttackBaseData } from "../../constants/fighter.js";
 import { FPS } from "../../constants/game.js";
+import { end } from "../../engine/GameHandler.js";
 
 export class StatusBar {
     time = 99;
@@ -129,7 +130,13 @@ export class StatusBar {
     updateHealthBars() {
         for (const index in this.healthBars) {
             if (this.healthBars[index].hitPoints < gameState.fighters[index].hitPoints) continue;
-            // console.log(gameState.fighters[index].hitPoints);
+                if(gameState.fighters[index].hitPoints <= 0) {
+                    
+                    console.log(`GAME ENDED ${gameState.fighters[((gameState.fighters[index].id = 'Ken') ? 0 : 1)].id} HAS WON!`);
+                    // console.log(end());
+                    
+
+                } 
             this.healthBars[index].hitPoints = gameState.fighters[index].hitPoints;
         }
         
