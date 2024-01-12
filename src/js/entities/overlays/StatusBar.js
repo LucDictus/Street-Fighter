@@ -129,8 +129,10 @@ export class StatusBar {
     updateHealthBars() {
         for (const index in this.healthBars) {
             if (this.healthBars[index].hitPoints < gameState.fighters[index].hitPoints) continue;
+            // console.log(gameState.fighters[index].hitPoints);
             this.healthBars[index].hitPoints = gameState.fighters[index].hitPoints;
         }
+        
     }
 
     updateKoIcon(time) {
@@ -159,12 +161,15 @@ export class StatusBar {
         context.fillStyle = HEALTH_DAMAGE_COLOR;
         context.fillRect(
             32, 21,
-            HEALTH_MAX_HIT_POINTS - Math.floor(this.healthBars[0].hitPoints), 9,
+            
+
+            HEALTH_MAX_HIT_POINTS - Math.floor((this.healthBars[0].hitPoints >= 0) ? this.healthBars[0].hitPoints : 0), 9,
         );
 
         context.fillRect(
-            208 + Math.floor(this.healthBars[1].hitPoints), 21,
-            HEALTH_MAX_HIT_POINTS - Math.floor(this.healthBars[1].hitPoints), 9,
+            208 + Math.floor((this.healthBars[1].hitPoints >= 0) ? this.healthBars[1].hitPoints : 0), 21,
+
+            HEALTH_MAX_HIT_POINTS - Math.floor((this.healthBars[1].hitPoints >= 0) ? this.healthBars[1].hitPoints : 0), 9,
         );
     }
 
