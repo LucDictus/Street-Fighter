@@ -54,6 +54,7 @@ export class Fighter {
                 FighterState.CROUCH_UP, FighterState.JUMP_LAND, FighterState.IDLE_TURN,
                 FighterState.LIGHT_PUNCH, FighterState.MEDIUM_PUNCH, FighterState.HEAVY_PUNCH,
                 FighterState.LIGHT_KICK, FighterState.MEDIUM_KICK, FighterState.HEAVY_KICK,
+                FighterState.HURT_HEAD_HEAVY, FighterState.HURT_HEAD_LIGHT, FighterState.HURT_HEAD_MEDIUM,
             ],
         },
         [FighterState.WALK_FORWARD]: {

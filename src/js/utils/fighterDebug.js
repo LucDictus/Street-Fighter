@@ -1,3 +1,5 @@
+import {gameState } from "../state/gameState.js";
+
 function drawCross(context, camera, position, color) {
     context.beginPath();
     context.strokeStyle = color;
