@@ -27,6 +27,7 @@ export class StreetFighterGame {
     }
 
     start() {
+
         registerKeyboardEvents();
 
         window.requestAnimationFrame(this.frame.bind(this));

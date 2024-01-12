@@ -3,30 +3,32 @@ import { Control } from '../constants/control.js';
 export const controls = [
     {
         keyboard: {
+            [Control.LEFT]: 'KeyA',
+            [Control.RIGHT]: 'KeyD',
+            [Control.UP]: 'KeyW',
+            [Control.DOWN]: 'KeyS',
+            [Control.LIGHT_PUNCH]: 'KeyQ',
+            [Control.MEDIUM_PUNCH]: 'KeyE',
+            [Control.HEAVY_PUNCH]: 'KeyZ',
+            [Control.LIGHT_KICK]: 'KeyX',
+            [Control.MEDIUM_KICK]: 'KeyC',
+            [Control.HEAVY_KICK]: 'KeyR',
+        },
+    },
+
+    {
+        keyboard: {
             [Control.LEFT]: 'ArrowLeft',
             [Control.RIGHT]: 'ArrowRight',
             [Control.UP]: 'ArrowUp',
             [Control.DOWN]: 'ArrowDown',
-            [Control.LIGHT_PUNCH]: 'ControlLeft',
-            [Control.MEDIUM_PUNCH]: 'AltLeft',
-            [Control.HEAVY_PUNCH]: 'Space',
-            [Control.LIGHT_KICK]: 'ShiftLeft',
-            [Control.MEDIUM_KICK]: 'KeyZ',
-            [Control.HEAVY_KICK]: 'KeyX',
-        },
-    },
-    {
-        keyboard: {
-            [Control.LEFT]: 'KeyF',
-            [Control.RIGHT]: 'KeyH',
-            [Control.UP]: 'KeyT',
-            [Control.DOWN]: 'KeyG',
-            [Control.LIGHT_PUNCH]: 'KeyQ',
-            [Control.MEDIUM_PUNCH]: 'KeyW',
-            [Control.HEAVY_PUNCH]: 'KeyE',
-            [Control.LIGHT_KICK]: 'KeyA',
-            [Control.MEDIUM_KICK]: 'KeyS',
-            [Control.HEAVY_KICK]: 'KeyD',
+            [Control.LIGHT_PUNCH]: 'ShiftRight',
+            [Control.MEDIUM_PUNCH]: 'Slash',
+            [Control.HEAVY_PUNCH]: 'Period',
+            [Control.LIGHT_KICK]: 'Comma',
+            [Control.MEDIUM_KICK]: 'Backslash',
+            [Control.HEAVY_KICK]: 'Enter',
         },
     }
+    
 ];

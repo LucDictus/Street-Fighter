@@ -64,3 +64,4 @@ export function DEBUG_drawCollisionInfo(fighter, context, camera) {
 export function DEBUG_logHit(fighter, hitStrength, hitLocation) {
     console.log(`${gameState.fighters[fighter.playerId].id} has hit ${gameState.fighters[fighter.opponent.playerId].id}'s ${hitLocation} with a ${hitStrength} attack!`);
 }
+

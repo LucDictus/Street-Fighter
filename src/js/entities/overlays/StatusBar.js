@@ -8,8 +8,10 @@ import {
     KO_FLASH_DELAY, 
     HEALTH_CRITICAL_HIT_POINTS 
 } from "../../constants/battle.js";
+
 import { gameState } from "../../state/gameState.js";
 import { drawFrame } from "../../utils/context.js";
+import { FighterAttackBaseData } from "../../constants/fighter.js";
 import { FPS } from "../../constants/game.js";
 
 export class StatusBar {
@@ -123,11 +125,13 @@ export class StatusBar {
         }
     }
 
-    updateHealthBars(time) {
+
+    updateHealthBars() {
         for (const index in this.healthBars) {
             if (this.healthBars[index].hitPoints < gameState.fighters[index].hitPoints) continue;
             // this.healthBars[index].hitPoints = Math.max(0, this.healthBars[index].hitPoints - (time.secondsPassed * FPS));
             this.healthBars[index].hitPoints = this.healthBars[index].hitPoints;
+            // console.log(FighterAttackBaseData);
         }
     }
 

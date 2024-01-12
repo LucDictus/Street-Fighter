@@ -55,6 +55,7 @@ export class Fighter {
                 FighterState.LIGHT_PUNCH, FighterState.MEDIUM_PUNCH, FighterState.HEAVY_PUNCH,
                 FighterState.LIGHT_KICK, FighterState.MEDIUM_KICK, FighterState.HEAVY_KICK,
                 FighterState.HURT_HEAD_HEAVY, FighterState.HURT_HEAD_LIGHT, FighterState.HURT_HEAD_MEDIUM,
+                FighterState.JUMP_START
             ],
         },
         [FighterState.WALK_FORWARD]: {
@@ -560,6 +561,7 @@ export class Fighter {
         const newState = this.getHitState(attackStrength, hitLocation);
         this.changeState(newState);
 
+        
         DEBUG_logHit(this, attackStrength, hitLocation);
     }
 
