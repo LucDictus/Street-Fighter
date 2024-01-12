@@ -129,9 +129,7 @@ export class StatusBar {
     updateHealthBars() {
         for (const index in this.healthBars) {
             if (this.healthBars[index].hitPoints < gameState.fighters[index].hitPoints) continue;
-            // this.healthBars[index].hitPoints = Math.max(0, this.healthBars[index].hitPoints - (time.secondsPassed * FPS));
-            this.healthBars[index].hitPoints = this.healthBars[index].hitPoints;
-            // console.log(FighterAttackBaseData);
+            this.healthBars[index].hitPoints = gameState.fighters[index].hitPoints;
         }
     }
 
