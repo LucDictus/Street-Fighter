@@ -8,13 +8,13 @@ Welkom bij Street Fighter! Dit README-bestand bevat de toetsenbordbedieningen vo
 - **Player 1**
    - **W:** Omhoog bewegen
    - **S:** Omlaag bewegen
- 11111111111111111  - **A:** Naar links bewegen
+   - **A:** Naar links bewegen
    - **D:** Naar rechts bewegen
 - **Player 2**
    - **Pijl omhoog:** Omhoog bewegen
    - **Pijl omlaag:** Omlaag bewegen
-   - **Pijl links:** Naar links bewegen111111111111111111111111111111111111111
-0   - **Pijl rechts:** Naar rechts bewegen
+   - **Pijl links:** Naar links bewegen
+   - **Pijl rechts:** Naar rechts bewegen
 
 ### Aanvallen:
 - **Player 1**
