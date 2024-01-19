@@ -106,6 +106,11 @@ export class Ryu extends Fighter {
             ['stun-1', [[[947, 1926, 77, 87], [28, 85]], PushBox.IDLE, [[8, -87, 28, 18], [-16, -75, 40, 46], [-26, -31, 40, 32]]]],
             ['stun-2', [[[1034, 1924, 65, 89], [28, 87]], PushBox.IDLE, [[-9, -89, 28, 18], [-23, -75, 40, 46], [-26, -31, 40, 32]]]],
             ['stun-3', [[[1108, 1923, 67, 90], [35, 88]], PushBox.IDLE, [[-22, -91, 28, 18], [-30, -72, 42, 40], [-26, -31, 40, 32]]]],
+
+            // Death
+            ['death-1', [[[636, 2164, 82, 77], [45, 74]], PushBox.IDLE, [[-41, -78, 20, 20], [-25, -78, 42, 42], [-11, -50, 42, 50]]]],
+            ['death-2', [[[726, 2197, 102, 45], [45, 42]], PushBox.IDLE, [[-41, -78, 20, 20], [-25, -78, 42, 42], [-11, -50, 42, 50]]]],
+            ['death-3', [[[1040, 2217, 128, 31], [45, 28]], PushBox.IDLE, [[-41, -78, 20, 20], [-25, -78, 42, 42], [-11, -50, 42, 50]]]],
         ]);
 
         this.animations = {
@@ -212,6 +217,10 @@ export class Ryu extends Fighter {
                 ['hit-stonach-2', FIGHTER_HURT_DELAY], ['hit-stonach-2', 3], ['hit-stonach-3', 4],
                 ['hit-stonach-4', 4], ['stun-3', 9], ['stun-3', FrameDelay.TRANSITION],
             ],
+            [FighterState.KO]: [
+                ['death-1', 3], ['death-2', 3], ['death-3', 3],
+                ['death-3', FrameDelay.TRANSITION],
+            ]
         };
 
         this.initialVelocity = {

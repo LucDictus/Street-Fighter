@@ -202,6 +202,14 @@ export class Fighter {
             update: this.handleHurtState.bind(this),
             validFrom: hurtStateValidFrom,
         },
+        [FighterState.KO]: {
+            init: this.handleKoInit.bind(this),
+            update: this.handleKoState.bind(this),
+            validFrom: [
+                FighterState.HURT_HEAD_HEAVY, FighterState.HURT_HEAD_LIGHT, FighterState.HURT_HEAD_MEDIUM,
+                FighterState.IDLE, FighterState.WALK_FORWARD, FighterState.WALK_BACKWARD,
+            ],
+        }
     };
 
     soundAttacks = {
@@ -347,6 +355,10 @@ export class Fighter {
     }
 
     handleHurtInit() {
+        this.resetVelocities();
+    }
+
+    handleKoInit() {
         this.resetVelocities();
     }
 
@@ -563,6 +575,17 @@ export class Fighter {
 
         
         DEBUG_logHit(this, attackStrength, hitLocation);
+    }
+
+    handleKoState() {
+        if (!this.isAnimationCompleted()) return;
+    
+        gameState.gameOver = true;
+        // check if player 1 or player 2 won
+        
+        
+        // show winner screen
+
     }
 
     updateAnimation(time) {

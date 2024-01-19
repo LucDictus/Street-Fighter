@@ -135,7 +135,7 @@ export class StatusBar {
                     console.log(`GAME ENDED ${gameState.fighters[((gameState.fighters[index].id = 'Ken') ? 0 : 1)].id} HAS WON!`);
                     // console.log(end());
                     
-
+                    
                 } 
             this.healthBars[index].hitPoints = gameState.fighters[index].hitPoints;
         }

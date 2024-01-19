@@ -70,6 +70,7 @@ export const FighterState = {
     HURT_BODY_LIGHT: 'hurt-body-light',
     HURT_BODY_MEDIUM: 'hurt-body-medium',
     HURT_BODY_HEAVY: 'hurt-body-heavy',
+    KO: 'ko',
 }
 
 export const FrameDelay = {
