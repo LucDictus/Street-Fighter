@@ -6,18 +6,31 @@ Welkom bij Street Fighter! Dit README-bestand bevat de toetsenbordbedieningen vo
 
 ### Algemene Bedieningen:
 - **Player 1**
-   - **Pijl Omhoog:** Omhoog bewegen
-   - **Pijl Omlaag:** Omlaag bewegen
-   - **Pijl Links:** Naar links bewegen
-   - **Pijl Rechts:** Naar rechts bewegen
+   - **W:** Omhoog bewegen
+   - **S:** Omlaag bewegen
+   - **A:** Naar links bewegen
+   - **D:** Naar rechts bewegen
 - **Player 2**
-   - **R:** Omhoog bewegen
-   - **F:** Omlaag bewegen
-   - **D:** Naar links bewegen
-   - **G:** Naar rechts bewegen
+   - **Pijl omhoog:** Omhoog bewegen
+   - **Pijl omlaag:** Omlaag bewegen
+   - **Pijl links:** Naar links bewegen
+   - **Pijl rechts:** Naar rechts bewegen
 
 ### Aanvallen:
-- Moet nog komen
+- **Player 1**
+   - **Q:** Lichte Slag
+   - **E:** Medium Slag
+   - **Z:** Zware Slag
+   - **X:** Lichte Trap
+   - **C:** Medium Trap
+   - **R:** Zware Trap
+- **Player 2**
+   - **Shift Right:** Lichte Slag
+   - **/:** Medium Slag
+   - **.:** Zware Slag
+   - **,:** Lichte Trap
+   - **\:** Medium Trap
+   - **Enter:** Zware Trap
 
 ### Speciale Aanvallen:
 - Moet nog komen
