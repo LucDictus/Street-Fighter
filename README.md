@@ -1,53 +1,52 @@
 # Street Fighter
 
-Welkom bij Street Fighter! Dit README-bestand bevat de toetsenbordbedieningen voor het spelen van Street Fighter op je computer met behulp van het toetsenbord.
+Welcome to Street Fighter! This README file contains the keyboard controls for playing Street Fighter on your computer using the keyboard.
 
-## Toetsenbordbedieningen
+## Keyboard Controls
 
-### Algemene Bedieningen:
+### General Controls:
 - **Player 1**
-   - **W:** Omhoog bewegen
-   - **S:** Omlaag bewegen
-   - **A:** Naar links bewegen
-   - **D:** Naar rechts bewegen
+   - **W:** Move Up
+   - **S:** Move Down
+   - **A:** Move Left
+   - **D:** Move Right
 - **Player 2**
-   - **Pijl omhoog:** Omhoog bewegen
-   - **Pijl omlaag:** Omlaag bewegen
-   - **Pijl links:** Naar links bewegen
-   - **Pijl rechts:** Naar rechts bewegen
+   - **Arrow Up:** Move Up
+   - **Arrow Down:** Move Down
+   - **Arrow Left:** Move Left
+   - **Arrow Right:** Move Right
 
-### Aanvallen:
+### Attacks:
 - **Player 1**
-   - **Q:** Lichte Slag
-   - **E:** Medium Slag
-   - **Z:** Zware Slag
-   - **X:** Lichte Trap
-   - **C:** Medium Trap
-   - **R:** Zware Trap
+   - **Q:** Light Punch
+   - **E:** Medium Punch
+   - **Z:** Heavy Punch
+   - **X:** Light Kick
+   - **C:** Medium Kick
+   - **R:** Heavy Kick
 - **Player 2**
-   - **Shift Right:** Lichte Slag
-   - **/:** Medium Slag
-   - **.:** Zware Slag
-   - **,:** Lichte Trap
-   - **\:** Medium Trap
-   - **Enter:** Zware Trap
+   - **Right Shift:** Light Punch
+   - **/:** Medium Punch
+   - **.:** Heavy Punch
+   - **,:** Light Kick
+   - **\:** Medium Kick
+   - **Enter:** Heavy Kick
 
-### Speciale Aanvallen:
-- Moet nog komen
+### Special Attacks:
+- To be implemented
 
-### Verdediging:
-- Moet nog komen
+### Defense:
+- To be implemented
 
-## Installatie en Uitvoering
-1. Kloon deze repository naar je lokale machine.
+## Installation and Execution
+1. Clone this repository to your local machine:
    ```bash
    git clone https://github.com/ROC-Tilburg-ICT-Mediatechnologie/proftaak-oldskool-game-alex-luc-street-fighter
-Navigeer naar de map waarin het spel is gekloond.
-bash
-Copy code
-cd StreetFighter
-Open het spel in je favoriete browser of uitvoerbaar bestand.
-Opmerkingen
-Zorg ervoor dat je de toetsenbordbedieningen aanpast aan je voorkeuren in het instellingenmenu van het spel.
-Raadpleeg de handleiding of helpsectie van het spel voor meer gedetailleerde informatie over combo's en geavanceerde bedieningen.
-Veel plezier met spelen!
+2. Navigate to the directory where the game is cloned:
+   ```bash
+   cd StreetFighter
+3. Open the game in your favorite browser or executable file.
+
+Notes:
+- Make sure to adjust the keyboard controls to your preferences the code itself.
+- Have fun playing!
